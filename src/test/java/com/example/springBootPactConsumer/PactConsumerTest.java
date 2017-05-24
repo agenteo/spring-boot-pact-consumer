@@ -53,6 +53,7 @@ public class PactConsumerTest {
                 .stringMatcher("status", "NEW|OK|ENDING", "OK")
                 .stringMatcher("offer_start_date", ".*", "2012-03-02T08:00:00.000Z")
                 .decimalType("price", 2000.22)
+                .decimalType("members_price", 1799.99)
                 .stringMatcher("offer_end_date", ".*", "2014-07-01T03:59:59.999Z")
                 .closeObject();
 
@@ -96,6 +97,7 @@ public class PactConsumerTest {
         assertThat(travelOfferEntities.get(0).getOfferStartDate(), not(nullValue()));
         assertThat(travelOfferEntities.get(0).getOfferEndDate(), not(nullValue()));
         assertThat(travelOfferEntities.get(0).getPrice(), not(nullValue()));
+        assertThat(travelOfferEntities.get(0).getMembersPrice(), not(nullValue()));
     }
 
 }

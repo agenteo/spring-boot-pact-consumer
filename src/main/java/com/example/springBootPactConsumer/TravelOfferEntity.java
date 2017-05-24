@@ -15,6 +15,8 @@ public class TravelOfferEntity {
     @JsonProperty("offer_end_date")
     private String offerEndDate;
     private String price;
+    @JsonProperty("members_price")
+    private String membersPrice;
 
     public String getUuid() {
         return uuid;
@@ -42,5 +44,9 @@ public class TravelOfferEntity {
 
     public String getPrice() {
         return price;
+    }
+
+    public String getMembersPrice() {
+        return membersPrice;
     }
 }
