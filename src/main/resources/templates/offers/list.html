@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<title>Travel offers aggregator</title>
+<body>
+
+<h1>Offers</h1>
+<table>
+    <tr>
+        <th>DESTINATION</th>
+        <th>PRICE</th>
+        <th>STATUS</th>
+    </tr>
+    <tr th:each="offer : ${offers}">
+        <td th:text="${offer.destinationName}">Milano</td>
+        <td th:text="${offer.price}">20000</td>
+        <td th:text="${offer.status}">STATUS</td>
+    </tr>
+</table>
+
+</body>
+</html>
